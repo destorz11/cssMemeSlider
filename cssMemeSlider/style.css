@@ -57,7 +57,7 @@ img{
     height: 100%;
     display: flex;
     color: wheat;
-    font-size: clamp(1rem, 3vw, 1.8rem);
+    font-size: 1.5em;
 }
 .slide {
     border-radius: 3%;
@@ -100,4 +100,20 @@ margin-left: -50%;
 }
 #r4:checked ~ .slides .s1{
 margin-left: -75%;
+}
+@media (max-width:500px) {
+    .slider{
+        display: flex;
+        flex-direction: column;
+    }
+    .slides{
+        order: 1;
+    }
+    .slides__text{
+        order:3;
+    }
+    .navigation {
+        order: 2;
+        justify-content: center;
+    }
 }
